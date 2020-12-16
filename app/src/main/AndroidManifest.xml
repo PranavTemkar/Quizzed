@@ -18,8 +18,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".activities.LoginActivity" />
         <activity android:name=".activities.SignupActivity" />
-        <activity android:name=".activities.LoginIntro" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.LoginIntro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
