@@ -34,29 +34,6 @@ class MainActivity : AppCompatActivity() {
         setUpFireStore()
         setUpDrawerLayout()
         setUpRecyclerView()
-        setUpDatePicker()
-    }
-
-    private fun setUpDatePicker() {
-        btnDatePicker.setOnClickListener {
-            val datePicker = MaterialDatePicker.Builder.datePicker().build()
-            datePicker.show(supportFragmentManager, "DatePicker")
-            datePicker.addOnPositiveButtonClickListener {
-                Log.d("DATEPICKER", datePicker.headerText)
-                val dateFormatter = SimpleDateFormat("dd-mm-yyyy")
-                val date = dateFormatter.format(Date(it))
-                val intent = Intent(this, QuestionActivity::class.java)
-                intent.putExtra("DATE", date)
-                startActivity(intent)
-            }
-            datePicker.addOnNegativeButtonClickListener {
-                Log.d("DATEPICKER", datePicker.headerText)
-
-            }
-            datePicker.addOnCancelListener {
-                Log.d("DATEPICKER", "Date Picker Cancelled")
-            }
-        }
     }
 
     private fun setUpFireStore() {
